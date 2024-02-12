@@ -1,6 +1,6 @@
 <?php
 $message = "";
-$url = "./html/signup.php";
+$url = "./php/signup.php";
 $prenom = empty($_POST["prenom"]) ? "" : $_POST["prenom"];
 $nom = empty($_POST["nom"]) ? "" : $_POST["nom"];
 $date = empty($_POST["date"]) ? "" : $_POST["date"];
