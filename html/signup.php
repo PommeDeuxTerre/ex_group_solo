@@ -10,15 +10,15 @@
     <form method="post" action="../index.php">
         <div class="field">
             <label for="prenom">Prénom</label>
-            <input type="text" id="prenom" name="prenom">
+            <input type="text" id="prenom" name="prenom" value="<?=$prenom?>">
         </div>
         <div class="field">
             <label for="nom">nom</label>
-            <input type="text" id="nom" name="nom">
+            <input type="text" id="nom" name="nom" value="<?=$nom?>">
         </div>
         <div class="field">
             <label for="date">Date de naissance</label>
-            <input id="date" type="date" name="date">
+            <input id="date" type="date" name="date" value="<?=$date?>">
         </div>
         <div class="field">
             <label for="password">Mot de passe</label>

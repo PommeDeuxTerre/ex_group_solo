@@ -1,13 +1,17 @@
 <?php
 $message = "";
 $url = "./html/signup.php";
-if (empty($_POST["prenom"]) && empty($_POST["nom"]) && empty($_POST["date"]) && empty($_POST["password"])){
+$prenom = empty($_POST["prenom"]) ? "" : $_POST["prenom"];
+$nom = empty($_POST["nom"]) ? "" : $_POST["nom"];
+$date = empty($_POST["date"]) ? "" : $_POST["date"];
+$password = empty($_POST["password"]) ? "" : $_POST["password"];
+if (!$prenom && !$nom && !$date && !$password){
     include($url);
-}else if (empty($_POST["prenom"]) || empty($_POST["nom"]) || empty($_POST["date"]) || empty($_POST["password"])) {
+}else if (!$prenom || !$nom || !$date || !$password) {
     $message = "vous n'avez pas remplis tous les champs";
     include($url);
 }else {
-    $birth_time = strtotime($_POST["date"]);
+    $birth_time = strtotime($date);
     $now_time = strtotime(date_default_timezone_get());
     $delay_time = 60*60*24*365*18;
     if ($now_time-$birth_time<$delay_time){
@@ -15,7 +19,6 @@ if (empty($_POST["prenom"]) && empty($_POST["nom"]) && empty($_POST["date"]) && 
         include($url);
         die;
     }
-    $password = $_POST["password"];
     $length_check = strlen($password)>=8;
     $digit_check = preg_match("/\d/", $password);
     $uppercase_check = preg_match("/[A-Z]/", $password);
