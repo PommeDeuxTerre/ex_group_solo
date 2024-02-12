@@ -1,5 +1,11 @@
-body {
-    background-color: aqua;
+/* colors
+black : #2b2d42
+grey : #8d99ae
+white : #edf2f4
+red clear : #ef233c
+red dark : #d90429
+*/body {
+    background-color: #2b2d42;
 }
 form {
     display: flex;
@@ -8,7 +14,8 @@ form {
     margin: auto;
     width: 50%;
     border-radius: 50px;
-    background-color: aquamarine;
+    background-color: #8d99ae;
+    font-size: 1.5em;
 }
 .field:first-child {
     margin-top: 50px;
@@ -33,19 +40,22 @@ input[type=submit] {
     border: none;
     border-radius: 15px;
     color: rgb(192, 192, 192);
-    background-color: rgb(0, 69, 158);
+    background-color: #ef233c;
 }
 input[type=submit]:hover {
-    background-color: rgb(1, 56, 128);
+    background-color: #d90429;
+}
+input[type=text], input[type=password], input[type=date]{
+    height: 30px;
 }
 .error {
-    width: 30%;
+    width: 60%;
     text-align: center;
     padding: 10px;
     border-radius: 15px;
     font-size: larger;
-    background-color: rgb(219, 219, 219);
-    color: rgb(180, 0, 0);
+    background-color: #edf2f4;
+    color: #d90429;
 }
 ul {
     list-style-type: none;
