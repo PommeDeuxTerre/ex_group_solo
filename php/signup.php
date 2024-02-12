@@ -13,12 +13,29 @@
             <input type="text" id="prenom" name="prenom" value="<?=$prenom?>">
         </div>
         <div class="field">
-            <label for="nom">nom</label>
+            <label for="nom">Nom</label>
             <input type="text" id="nom" name="nom" value="<?=$nom?>">
         </div>
         <div class="field">
             <label for="date">Date de naissance</label>
             <input id="date" type="date" name="date" value="<?=$date?>">
+        </div>
+        <div class="field">
+            <label for="gender">Genre</label>
+            <ul>
+                <li>
+                    <input id="homme" type="radio" name="gender">
+                    <label for="homme">Homme</label>
+                </li>
+                <li>
+                    <input id="femme" type="radio" name="gender">
+                    <label for="femme">Femme</label>
+                </li>
+                <li>
+                    <input id="pomme" type="radio" name="gender" checked>
+                    <label for="pomme">Pomme</label>
+                </li>
+            </ul>
         </div>
         <div class="field">
             <label for="password">Mot de passe</label>
