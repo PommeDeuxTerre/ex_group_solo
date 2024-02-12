@@ -30,7 +30,7 @@
         <?php
         if ($message!==""):
         ?>
-            <p><?=$message?></p>
+            <p class="error"><?=$message?></p>
         <?php
         endif;
         ?>
